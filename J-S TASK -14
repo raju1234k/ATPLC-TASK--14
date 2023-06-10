@@ -1,0 +1,66 @@
+<!Doctype html> 
+<html> 
+<head> 
+<title> JS:Task_14 </title> 
+</head> 
+<body> 
+<script> 
+function filterNegativeNumbers(numbers) {
+  return numbers.filter(function(number) {
+    return number >= 0;
+  });
+}
+let numbers=prompt("Enter the number");
+const num= filterNegativeNumbers(numbers);
+console.log(num);
+
+
+function diffFrom13(num) {
+ if (num <= 13) {
+    return 13 - num;
+  } else {
+    return (num - 13) * 2;
+  }
+}
+let num1= prompt("Enter a number");
+const diff = diffFrom13(num1);
+ console.log(diff);
+
+
+
+ function fibonacci(num) {
+  let fibSeries = [];
+  fibSeries[0] = 0;
+  fibSeries[1] = 1;
+
+  for (let i = 2; i < num; i++) {
+    fibSeries[i] = fibSeries[i - 1] + fibSeries[i - 2];
+  }
+
+  return fibSeries;
+}
+
+const num2= prompt("Enter the number of terms in the Fibonacci series :");
+const fibSeries = fibonacci(num2);
+console.log("Fibonacci series upto" +num2+ "terms:" +fibSeries);
+
+
+function sumMultiples() {
+  let sum = 0;
+  for (let i = 1; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+const cube = function(num) {
+  return num ** 3;
+};
+
+let num3= prompt("Enter a number");
+console.log(cube(num3)); 
+</script>
+</body> 
+</html> 
